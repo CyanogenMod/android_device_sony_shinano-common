@@ -581,11 +581,6 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-service hw_config /system/bin/sh /system/etc/hw_config.sh
-    class main
-    user root
-    oneshot
-
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \

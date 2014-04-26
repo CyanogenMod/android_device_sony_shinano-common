@@ -37,10 +37,12 @@ etc/firmware/adsp.b08
 etc/firmware/adsp.b09
 etc/firmware/adsp.b10
 etc/firmware/adsp.b11
+etc/firmware/adsp.b12
 etc/firmware/adsp.mdt
 vendor/lib/libadsprpc.so
 
 # Bluetooth
+etc/firmware/BCM4339.hcd
 bin/btnvtool
 bin/hci_qcomm_init
 vendor/lib/libbtnv.so
@@ -51,7 +53,6 @@ etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 lib/hw/camera.qcom.so:lib/hw/vendor-camera.qcom.so
-lib/libals.so
 lib/libcamera_clientsemc.so
 lib/libcammw.so
 lib/libmmcamera_interface.so
@@ -103,6 +104,19 @@ lib/libsomc_chokoballpal.so
 lib/libsony_chokoball.so
 
 # Chromatix
+vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so
+vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so
+vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_common.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_default_video.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_120fps.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_60fps.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_90fps.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_liveshot.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_preview.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_snapshot.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_video_hd.so
+vendor/lib/libchromatix_SKUAB_ST_s5k4e1_zsl.so
 vendor/lib/libchromatix_imx134_common.so
 vendor/lib/libchromatix_imx134_default_video.so
 vendor/lib/libchromatix_imx134_hfr_120.so
@@ -112,6 +126,8 @@ vendor/lib/libchromatix_imx134_snapshot.so
 vendor/lib/libchromatix_imx135_common.so
 vendor/lib/libchromatix_imx135_default_video.so
 vendor/lib/libchromatix_imx135_hfr_120.so
+vendor/lib/libchromatix_imx135_hfr_60.so
+vendor/lib/libchromatix_imx135_hfr_90.so
 vendor/lib/libchromatix_imx135_preview.so
 vendor/lib/libchromatix_imx135_snapshot.so
 vendor/lib/libchromatix_imx135_video_hd.so
@@ -131,12 +147,12 @@ vendor/lib/libchromatix_ov8825_default_video.so
 vendor/lib/libchromatix_ov8825_hfr_120fps.so
 vendor/lib/libchromatix_ov8825_hfr_60fps.so
 vendor/lib/libchromatix_ov8825_hfr_90fps.so
-vendor/lib/libchromatix_ov8825_liveshot_hd.so
 vendor/lib/libchromatix_ov8825_liveshot.so
-vendor/lib/libchromatix_ov8825_preview_hd.so
+vendor/lib/libchromatix_ov8825_liveshot_hd.so
 vendor/lib/libchromatix_ov8825_preview.so
-vendor/lib/libchromatix_ov8825_snapshot_hd.so
+vendor/lib/libchromatix_ov8825_preview_hd.so
 vendor/lib/libchromatix_ov8825_snapshot.so
+vendor/lib/libchromatix_ov8825_snapshot_hd.so
 vendor/lib/libchromatix_ov8825_video_hd.so
 vendor/lib/libchromatix_ov8825_zsl.so
 vendor/lib/libchromatix_ov8865_q8v18a_common.so
@@ -163,25 +179,12 @@ vendor/lib/libchromatix_s5k3l1yx_preview.so
 vendor/lib/libchromatix_s5k3l1yx_snapshot.so
 vendor/lib/libchromatix_s5k3l1yx_video_hd.so
 vendor/lib/libchromatix_s5k3l1yx_zsl.so
-vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so
-vendor/lib/libchromatix_SKUAA_ST_gc0339_default_video.so
-vendor/lib/libchromatix_SKUAA_ST_gc0339_preview.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_common.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_default_video.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_liveshot.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_preview.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_snapshot.so
 vendor/lib/libchromatix_skuab_shinetech_gc0339_zsl.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_common.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_default_video.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_120fps.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_60fps.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_hfr_90fps.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_liveshot.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_preview.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_snapshot.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_video_hd.so
-vendor/lib/libchromatix_SKUAB_ST_s5k4e1_zsl.so
 vendor/lib/libchromatix_skuf_ov12830_p12v01c_common.so
 vendor/lib/libchromatix_skuf_ov12830_p12v01c_default_video.so
 vendor/lib/libchromatix_skuf_ov12830_p12v01c_hfr_120fps.so
@@ -207,14 +210,11 @@ etc/firmware/venus.mdt
 
 # CPU
 bin/mpdecision
-vendor/lib/libthermalclient.so
 vendor/lib/libqc-opt.so
 
 # FM
 bin/fmconfig
 bin/fm_qsoc_patches
-lib/libfmradio.so
-lib/libfmradio.sony-iris.so
 
 # GPS
 -app/com.qualcomm.location.apk
@@ -239,7 +239,6 @@ etc/firmware/tzhdcp.b03
 etc/firmware/tzhdcp.mdt
 
 # HW Config
-etc/hw_config.sh
 etc/pre_hw_config.sh
 
 # IRSC
@@ -280,9 +279,9 @@ vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
 
 # Modem firmware
-etc/firmware/c6x02/mba.b00
-etc/firmware/c6x02/modem.b01
-etc/firmware/c6x02/modem.mdt
+#etc/firmware/D6x02/mba.b00
+#etc/firmware/D6x02/modem.b01
+#etc/firmware/D6x02/modem.mdt
 etc/firmware/mba.b00
 etc/firmware/mba.mdt
 etc/firmware/modem.b00
@@ -292,6 +291,7 @@ etc/firmware/modem.b03
 etc/firmware/modem.b04
 etc/firmware/modem.b05
 etc/firmware/modem.b08
+etc/firmware/modem.b10
 etc/firmware/modem.b11
 etc/firmware/modem.b13
 etc/firmware/modem.b14
@@ -305,10 +305,11 @@ etc/firmware/modem.b21
 etc/firmware/modem.b22
 etc/firmware/modem.b25
 etc/firmware/modem.b26
+etc/firmware/modem.b27
 etc/firmware/modem.mdt
 
 # NFC
-lib/hw/nfc.msm8974.so
+lib/hw/nfc_nci_pn547.msm8974.so
 
 # Playready
 etc/firmware/cmnlib.b00
@@ -391,6 +392,7 @@ lib/libsysmon_idd.so
 lib/libsysmon.so
 lib/libsys-utils.so
 lib/sysmon/sysmon_batt_therm.so
+lib/sysmon/sysmon_cam_therm0.so
 lib/sysmon/sysmon_charge_current_limit_level.so
 lib/sysmon/sysmon_charging.so
 lib/sysmon/sysmon_corelimit.so
@@ -407,6 +409,7 @@ lib/sysmon/sysmon_perflevel.so
 lib/sysmon/sysmon_pm8941_tz.so
 lib/sysmon/sysmon_quiet_therm.so
 lib/sysmon/sysmon_test_sensor.so
+lib/sysmon/sysmon_torch_limit.so
 lib/sysmon/sysmon_tsens_interrupt.so
 lib/sysmon/sysmon_tsens_tz_sensor0.so
 lib/sysmon/sysmon_tsens_tz_sensor10.so
@@ -420,6 +423,7 @@ lib/sysmon/sysmon_tsens_tz_sensor7.so
 lib/sysmon/sysmon_tsens_tz_sensor8.so
 lib/sysmon/sysmon_tsens_tz_sensor9.so
 lib/sysmon/sysmon_usb_current_limit_value.so
+lib/sysmon/sysmon_v_therm0.so
 lib/sysmon/sysmon_wlan_limit.so
 lib/sysmon/sysmon_xo_therm.so
 
@@ -427,12 +431,6 @@ lib/sysmon/sysmon_xo_therm.so
 bin/radish
 
 # WiFi firmware
-etc/firmware/wcnss.b00
-etc/firmware/wcnss.b01
-etc/firmware/wcnss.b02
-etc/firmware/wcnss.b04
-etc/firmware/wcnss.b06
-etc/firmware/wcnss.b07
-etc/firmware/wcnss.b08
-etc/firmware/wcnss.b09
-etc/firmware/wcnss.mdt
+etc/firmware/wlan/bcmdhd/bcmdhd.cal
+etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
+etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
