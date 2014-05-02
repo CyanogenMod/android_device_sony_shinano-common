@@ -24,6 +24,13 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 
+# Audio BLOBS
+lib/hw/audio.primary.msm8974.so
+lib/libaudioroute.so
+lib/libtinyalsa.so
+vendor/etc/effect_init_params
+vendor/lib/liblistenhardware.so
+
 # ADSP
 etc/firmware/adsp.b00
 etc/firmware/adsp.b01
