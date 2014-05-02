@@ -252,6 +252,10 @@ on boot
     chown system /sys/devices/virtual/timed_output/vibrator/vtg_level
 
 on post-fs
+    # MHL driver. To support MHL power off charge,
+    # the insmod must be done before chargemon.
+    insmod /system/lib/modules/mhl_sii8620_8061_drv.ko
+
     exec /system/bin/chargemon
     write /sys/class/power_supply/battery/enable_stop_charging_at_low_battery 1
 
