@@ -70,8 +70,12 @@ vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hdr_lib.so
 vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
 vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
 vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
+vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so
@@ -86,6 +90,8 @@ lib/camera/libexcal_idtctrl_plugin.so
 lib/libcacao_chokoball.so
 lib/libcacao_client.so
 lib/libcacao_common.so
+lib/libcacao_face.so
+lib/libcacao_imageconv.so
 lib/libcacao_imgproc.so
 lib/libcacao_jpeg.so
 lib/libcacao_pal.so
@@ -102,6 +108,8 @@ lib/libface.so
 lib/libface_wrapper.so
 lib/libsomc_chokoballpal.so
 lib/libsony_chokoball.so
+lib/libsony_chokoballrsc.so
+lib/libsony_face.so
 
 # Chromatix
 vendor/lib/libchromatix_SKUAA_ST_gc0339_common.so
@@ -366,21 +374,6 @@ etc/firmware/tzsuntory.b02
 etc/firmware/tzsuntory.b03
 etc/firmware/tzsuntory.mdt
 
-# TA
-bin/taimport
-bin/ta_param_loader
-bin/ta_qmi_service
-lib/libMiscTaAccessor.so
-lib/libmiscta.so
-lib/libta.so
-
-# Time
-bin/time_daemon
--vendor/lib/libtime_genoff.so
-
-# Touchscreen
-bin/clearpad_fwloader
-
 # Sensors
 vendor/lib/hw/sensors.msm8974.so
 vendor/lib/libsensor_reg.so
@@ -426,6 +419,51 @@ lib/sysmon/sysmon_usb_current_limit_value.so
 lib/sysmon/sysmon_v_therm0.so
 lib/sysmon/sysmon_wlan_limit.so
 lib/sysmon/sysmon_xo_therm.so
+
+# TA
+bin/taimport
+bin/ta_param_loader
+bin/ta_qmi_service
+lib/libMiscTaAccessor.so
+lib/libmiscta.so
+lib/libta.so
+
+# TFA98XX DSP
+etc/sforce/sforce_coef_music.bin
+etc/sforce/sforce_coef_video.bin
+etc/tfa98xx/btm.speaker
+etc/tfa98xx/coldboot.patch
+etc/tfa98xx/FMSpeaker_btm.eq
+etc/tfa98xx/FMSpeaker_btm.preset
+etc/tfa98xx/FMSpeaker_top.eq
+etc/tfa98xx/FMSpeaker_top.preset
+etc/tfa98xx/HiFiSpeaker_btm.eq
+etc/tfa98xx/HiFiSpeaker_btm.preset
+etc/tfa98xx/HiFiSpeakerRing_btm.eq
+etc/tfa98xx/HiFiSpeakerRing_btm.preset
+etc/tfa98xx/HiFiSpeakerRing_top.eq
+etc/tfa98xx/HiFiSpeakerRing_top.preset
+etc/tfa98xx/HiFiSpeakerSforce_btm.eq
+etc/tfa98xx/HiFiSpeakerSforce_btm.preset
+etc/tfa98xx/HiFiSpeakerSforce_top.eq
+etc/tfa98xx/HiFiSpeakerSforce_top.preset
+etc/tfa98xx/HiFiSpeaker_top.eq
+etc/tfa98xx/HiFiSpeaker_top.preset
+etc/tfa98xx/TFA9890_btm.config
+etc/tfa98xx/TFA9890.patch
+etc/tfa98xx/TFA9890_top.config
+etc/tfa98xx/top.speaker
+etc/tfa98xx/VoiceCallSpeaker_btm.eq
+etc/tfa98xx/VoiceCallSpeaker_btm.preset
+etc/tfa98xx/VoiceCallSpeaker_top.eq
+etc/tfa98xx/VoiceCallSpeaker_top.preset
+
+# Time
+bin/time_daemon
+-vendor/lib/libtime_genoff.so
+
+# Touchscreen
+bin/clearpad_fwloader
 
 # WiFi
 bin/radish
