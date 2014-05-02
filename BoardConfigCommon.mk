@@ -23,7 +23,7 @@ include device/sony/qcom-common/BoardConfigCommon.mk
 TARGET_SPECIFIC_HEADER_PATH := device/sony/shinano-common/include
 
 # Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8974
+TARGET_KERNEL_SOURCE := kernel/sony/msm8974pro
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
