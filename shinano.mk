@@ -171,7 +171,7 @@ PRODUCT_PACKAGES += \
 
 # aDSP
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.sensors.qmd=true \
+    ro.qualcomm.sensors.qmd=false \
     debug.qualcomm.sns.hal=w \
     ro.qc.sdk.sensors.gestures=false \
     ro.qc.sensors.max_accel_rate=false \
@@ -179,12 +179,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sensors.max_mag_rate=false \
     ro.qc.sensors.smgr_mag_cal_en=true \
     ro.qualcomm.sensors.pedometer=false \
-    ro.qc.sensors.step_counter=true \
-    ro.qc.sensors.step_detector=true \
     ro.qualcomm.sensors.pam=false \
     ro.qualcomm.sensors.scrn_ortn=false \
+    ro.qualcomm.sensors.smd=sony \
+    ro.qc.sensors.step_detector=true \
+    ro.qc.sensors.step_counter=true \
     ro.qualcomm.sensors.georv=true \
-    ro.qualcomm.sensors.smd=sony
+    ro.qc.sensors.max_geomag_rotvec=50
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
