@@ -33,13 +33,13 @@ public class VibratorHW {
         return 21;
     }
     public static int getWarningThreshold()  {
-        return 30;
+        return 31;
     }
     public static int getCurIntensity()  {
         return Integer.parseInt(FileUtils.readOneLine(LEVEL_PATH));
     }
     public static int getDefaultIntensity()  {
-        return 29;
+        return 31;
     }
     public static boolean setIntensity(int intensity)  {
         return FileUtils.writeLine(LEVEL_PATH, String.valueOf(intensity));
