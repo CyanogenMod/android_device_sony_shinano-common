@@ -272,6 +272,11 @@ typedef struct {
                                    e.g., "192.0.1.3" or "192.0.1.11 2001:db8::1".
                                    May be empty in which case the addresses represent point
                                    to point connections. */
+
+    /* Sony overloaded setupdatacall "invalid response length 44 expected multiple of 36"
+       add two char to match the new Sony struct length */
+    char *          ignore1;
+    char *          ignore2;
 } RIL_Data_Call_Response_v6;
 
 typedef enum {
