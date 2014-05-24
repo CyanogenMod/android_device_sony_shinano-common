@@ -282,6 +282,7 @@ on post-fs-data
     mkdir /data/tombstones/vendor 0755 system system
     mkdir /data/pc 0700 radio radio
     mkdir /data/persist 0770 system system
+    mkdir /data/mediaserver 0740 media media
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
