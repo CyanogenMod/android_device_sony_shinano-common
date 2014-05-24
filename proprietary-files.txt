@@ -28,6 +28,7 @@ vendor/lib/libaudcal.so
 lib/hw/audio.primary.msm8974.so
 lib/libaudioroute.so
 lib/libtinyalsa.so
+lib/soundfx/libqcomvisualizer.so
 vendor/etc/effect_init_params
 vendor/lib/liblistenhardware.so
 
