@@ -791,3 +791,11 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor performance
+
+service touchscreend /system/bin/touchscreend
+    disabled
+    user root
+    class core
+
+on property:init.svc.illumination=running
+    start touchscreend

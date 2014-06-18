@@ -224,7 +224,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Touchscreen
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.input.noresample=1
+    ro.input.noresample=1 \
+    sys.charger_plugged=0 \
+    sys.screen_on=0
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
