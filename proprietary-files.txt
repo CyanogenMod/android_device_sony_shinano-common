@@ -473,6 +473,7 @@ bin/time_daemon
 
 # Touchscreen
 bin/clearpad_fwloader
+bin/touchscreend
 
 # WiFi
 bin/radish
