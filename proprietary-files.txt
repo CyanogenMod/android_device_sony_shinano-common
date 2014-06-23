@@ -411,7 +411,6 @@ lib/sysmon/sysmon_perflevel.so
 lib/sysmon/sysmon_pm8941_tz.so
 lib/sysmon/sysmon_quiet_therm.so
 lib/sysmon/sysmon_test_sensor.so
-lib/sysmon/sysmon_torch_limit.so
 lib/sysmon/sysmon_tsens_interrupt.so
 lib/sysmon/sysmon_tsens_tz_sensor0.so
 lib/sysmon/sysmon_tsens_tz_sensor10.so
