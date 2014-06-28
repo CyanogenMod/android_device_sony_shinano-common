@@ -1,3 +1,16 @@
+# Audio
+vendor/lib/libacdbloader.so
+vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libaudcal.so
+
+# Audio BLOBS
+lib/libaudioroute.so
+lib/libtinyalsa.so
+lib/soundfx/libqcomvisualizer.so
+vendor/etc/effect_init_params
+vendor/lib/liblistenhardware.so
+
 # ACDB
 etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb
 etc/acdbdata/Fluid/Fluid_General_cal.acdb
@@ -5,7 +18,6 @@ etc/acdbdata/Fluid/Fluid_Global_cal.acdb
 etc/acdbdata/Fluid/Fluid_Handset_cal.acdb
 etc/acdbdata/Fluid/Fluid_Hdmi_cal.acdb
 etc/acdbdata/Fluid/Fluid_Headset_cal.acdb
-etc/acdbdata/Fluid/Fluid_Speaker_cal.acdb
 etc/acdbdata/Liquid/Liquid_Bluetooth_cal.acdb
 etc/acdbdata/Liquid/Liquid_General_cal.acdb
 etc/acdbdata/Liquid/Liquid_Global_cal.acdb
@@ -17,36 +29,7 @@ etc/acdbdata/MTP/MTP_Global_cal.acdb
 etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 etc/acdbdata/MTP/MTP_Headset_cal.acdb
 
-# Audio
-etc/audio_policy.conf
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-
-# Audio BLOBS
-lib/hw/audio.primary.msm8974.so
-lib/libaudioroute.so
-lib/libtinyalsa.so
-lib/soundfx/libqcomvisualizer.so
-vendor/etc/effect_init_params
-vendor/lib/liblistenhardware.so
-
 # ADSP
-etc/firmware/adsp.b00
-etc/firmware/adsp.b01
-etc/firmware/adsp.b02
-etc/firmware/adsp.b03
-etc/firmware/adsp.b04
-etc/firmware/adsp.b05
-etc/firmware/adsp.b06
-etc/firmware/adsp.b07
-etc/firmware/adsp.b08
-etc/firmware/adsp.b09
-etc/firmware/adsp.b10
-etc/firmware/adsp.b11
-etc/firmware/adsp.b12
-etc/firmware/adsp.mdt
 vendor/lib/libadsprpc.so
 
 # Bluetooth
@@ -62,7 +45,6 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 lib/hw/camera.qcom.so:lib/hw/vendor-camera.qcom.so
 lib/libcamera_clientsemc.so
-lib/libcammw.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
@@ -301,32 +283,6 @@ vendor/lib/libril-qc-qmi-1.so
 #etc/firmware/D6x02/modem.mdt
 etc/firmware/mba.b00
 etc/firmware/mba.mdt
-etc/firmware/modem.b00
-etc/firmware/modem.b01
-etc/firmware/modem.b02
-etc/firmware/modem.b03
-etc/firmware/modem.b04
-etc/firmware/modem.b05
-etc/firmware/modem.b08
-etc/firmware/modem.b10
-etc/firmware/modem.b11
-etc/firmware/modem.b13
-etc/firmware/modem.b14
-etc/firmware/modem.b15
-etc/firmware/modem.b16
-etc/firmware/modem.b17
-etc/firmware/modem.b18
-etc/firmware/modem.b19
-etc/firmware/modem.b20
-etc/firmware/modem.b21
-etc/firmware/modem.b22
-etc/firmware/modem.b25
-etc/firmware/modem.b26
-etc/firmware/modem.b27
-etc/firmware/modem.mdt
-
-# NFC
-lib/hw/nfc_nci_pn547.msm8974.so
 
 # Playready
 etc/firmware/cmnlib.b00
@@ -361,7 +317,6 @@ vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 
 # Security
-bin/suntrold
 lib/lib_asb_tee.so
 lib/libidd.so
 lib/libkeyctrl.so
@@ -424,7 +379,6 @@ lib/sysmon/sysmon_tsens_tz_sensor7.so
 lib/sysmon/sysmon_tsens_tz_sensor8.so
 lib/sysmon/sysmon_tsens_tz_sensor9.so
 lib/sysmon/sysmon_usb_current_limit_value.so
-lib/sysmon/sysmon_v_therm2.so
 lib/sysmon/sysmon_wlan_limit.so
 lib/sysmon/sysmon_xo_therm.so
 
@@ -437,34 +391,8 @@ lib/libmiscta.so
 lib/libta.so
 
 # TFA98XX DSP
-etc/sforce/sforce_coef_music.bin
-etc/sforce/sforce_coef_video.bin
-etc/tfa98xx/btm.speaker
 etc/tfa98xx/coldboot.patch
-etc/tfa98xx/FMSpeaker_btm.eq
-etc/tfa98xx/FMSpeaker_btm.preset
-etc/tfa98xx/FMSpeaker_top.eq
-etc/tfa98xx/FMSpeaker_top.preset
-etc/tfa98xx/HiFiSpeaker_btm.eq
-etc/tfa98xx/HiFiSpeaker_btm.preset
-etc/tfa98xx/HiFiSpeakerRing_btm.eq
-etc/tfa98xx/HiFiSpeakerRing_btm.preset
-etc/tfa98xx/HiFiSpeakerRing_top.eq
-etc/tfa98xx/HiFiSpeakerRing_top.preset
-etc/tfa98xx/HiFiSpeakerSforce_btm.eq
-etc/tfa98xx/HiFiSpeakerSforce_btm.preset
-etc/tfa98xx/HiFiSpeakerSforce_top.eq
-etc/tfa98xx/HiFiSpeakerSforce_top.preset
-etc/tfa98xx/HiFiSpeaker_top.eq
-etc/tfa98xx/HiFiSpeaker_top.preset
-etc/tfa98xx/TFA9890_btm.config
 etc/tfa98xx/TFA9890.patch
-etc/tfa98xx/TFA9890_top.config
-etc/tfa98xx/top.speaker
-etc/tfa98xx/VoiceCallSpeaker_btm.eq
-etc/tfa98xx/VoiceCallSpeaker_btm.preset
-etc/tfa98xx/VoiceCallSpeaker_top.eq
-etc/tfa98xx/VoiceCallSpeaker_top.preset
 
 # Time
 bin/time_daemon
@@ -477,6 +405,5 @@ bin/clearpad_fwloader
 bin/radish
 
 # WiFi firmware
-etc/firmware/wlan/bcmdhd/bcmdhd.cal
 etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
 etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
