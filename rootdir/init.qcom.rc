@@ -527,6 +527,10 @@ service updatemiscta /system/bin/updatemiscta
 service netmgrd /system/bin/netmgrd
     class main
 
+on property:ro.radio.noril=true
+    stop ril-daemon
+    stop netmgrd
+
 # start GNS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
     class late_start
