@@ -58,8 +58,8 @@ on init
     chown bluetooth net_bt_stack ro.bt.bdaddr_path
 
     # bluetooth LPM
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
-    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+    chown bluetooth net_bt_stack /proc/bluetooth/wakeup/proto
+    chmod 0664 /proc/bluetooth/wakeup/proto
 
     # Enable ramdumps from subsystems to dump
     # Should be initialized during init

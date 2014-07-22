@@ -38,6 +38,10 @@ bin/btnvtool
 bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
+# Bluetooth BLOBS
+lib/libbt-hci.so
+vendor/lib/libbt-vendor.so
+
 # Camera
 bin/mm-qcamera-daemon
 etc/firmware/cpp_firmware_v1_1_1.fw
