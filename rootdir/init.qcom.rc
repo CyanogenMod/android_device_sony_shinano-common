@@ -61,9 +61,6 @@ on init
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
 
-    # create directory for scd
-    mkdir /dev/socket/scd 0755 system system
-
     # Enable ramdumps from subsystems to dump
     # Should be initialized during init
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "RELATED"
@@ -75,7 +72,7 @@ on init
     write /proc/sys/vm/panic_on_oom 2
 
     # Create a tmpfs for dynamic network mounting
-    mkdir /storage/removable/remote  0700 root system
+    mkdir /storage/removable/remote 0700 root system
     mount tmpfs tmpfs /storage/removable/remote mode=0755,uid=0,gid=0
 
     # Set the property to indicate type of virtual display to 0
@@ -187,7 +184,7 @@ on boot
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
 
-    #To allow interfaces to get v6 address when tethering is enabled
+    # To allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
@@ -229,8 +226,7 @@ on boot
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
 
-# QCOM Sensors
-    insmod /system/lib/modules/adsprpc.ko
+    # QCOM Sensors
     mkdir /data/system 0775 system system
     mkdir /data/system/sensors 0775 system system
     mkdir /data/misc/sensors 0775 system system
@@ -684,11 +680,6 @@ service illumination /system/bin/illumination_service
     class main
     user root
 
-service scd /system/bin/scd
-    class main
-    user system
-    group system
-
 # Secure Config Transfer service
 service sct_service /system/bin/sct_service
     user root
@@ -732,23 +723,10 @@ service sensors /system/bin/sensors.qcom
     group root
     disabled
 
-service wcnss-service /system/bin/wcnss_service
-    class late_start
-    user system
-    group system wifi
-    disabled
-    oneshot
-
 service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root radio qcom_diag
-
-service ptt_socket_app /system/bin/ptt_socket_app
-    class main
-    user system
-    group system
-    oneshot
 
 on property:init.svc.surfaceflinger=running
     start ppd
