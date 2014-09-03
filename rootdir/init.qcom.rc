@@ -669,3 +669,6 @@ on property:init.svc.bootanim=stopped
 on property:init.svc.bootanim=running
     # Switch to NOOP while booting
     write /sys/block/mmcblk0/queue/scheduler noop
+    # Clear Sony boot splash
+    write /sys/class/graphics/fb0/blank 1
+    write /sys/class/graphics/fb0/blank 0
