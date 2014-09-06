@@ -50,9 +50,6 @@ PRODUCT_PACKAGES += \
     extract_elf_ramdisk
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
-
-PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/D6x02.sh:D6x02.sh
 
 # Sbin
