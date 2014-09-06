@@ -52,9 +52,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/D6x02.sh:D6x02.sh
-
 # Sbin
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/charger:root/charger \
