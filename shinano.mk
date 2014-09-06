@@ -49,9 +49,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     extract_elf_ramdisk
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/D6x02.sh:D6x02.sh
-
 # Sbin
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/charger:root/charger \
