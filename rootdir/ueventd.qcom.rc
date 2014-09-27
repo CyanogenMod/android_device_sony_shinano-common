@@ -167,14 +167,15 @@
 /sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_dac_calibrate   0660    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_dac_mid_val     0660    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_obj_detect      0660    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_pad_set         0220    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_pad_num         0220    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_pad_data        0440    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_pad_offset      0660    system   system
-/sys/devices/f9967000.i2c/i2c-11/11-002*    ad7146_sw_updata       0440    system   system
+/sys/devices/virtual/cap_sensor/ad7146      dac_calibrate          0660    system   system
+/sys/devices/virtual/cap_sensor/ad7146      dac_mid_val            0660    system   system
+/sys/devices/virtual/cap_sensor/ad7146      force_calib            0220    system   system
+/sys/devices/virtual/cap_sensor/ad7146      obj_detect             0660    system   system
+/sys/devices/virtual/cap_sensor/ad7146      pad_set                0220    system   system
+/sys/devices/virtual/cap_sensor/ad7146      pad_num                0220    system   system
+/sys/devices/virtual/cap_sensor/ad7146      pad_data               0440    system   system
+/sys/devices/virtual/cap_sensor/ad7146      pad_offset             0660    system   system
+/sys/devices/virtual/cap_sensor/ad7146      sw_updata              0440    system   system
 /sys/devices/virtual/switch/ad7146          state                  0660    system   system
 /sys/devices/virtual/switch/ad7146_*        state                  0660    system   system
 
