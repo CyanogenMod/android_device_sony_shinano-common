@@ -262,6 +262,10 @@ on boot
 
     chown system /sys/devices/virtual/timed_output/vibrator/vtg_level
 
+    # NFC
+    # Symlink for compability
+    symlink /dev/pn547 /dev/pn544
+
 on post-fs
     # MHL driver. To support MHL power off charge,
     # the insmod must be done before chargemon.
