@@ -385,10 +385,6 @@ lib/libMiscTaAccessor.so
 lib/libmiscta.so
 lib/libta.so
 
-# TFA98XX DSP
-etc/tfa98xx/coldboot.patch
-etc/tfa98xx/TFA9890.patch
-
 # Time
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
