@@ -260,7 +260,7 @@ on post-fs
     insmod /system/lib/modules/mhl_sii8620_8061_drv.ko
 
     exec /system/bin/chargemon
-    write /sys/class/power_supply/battery/enable_stop_charging_at_low_battery 1
+    write /sys/class/power_supply/battery/enable_shutdown_at_low_battery 1
 
     # Change to socket location on libkeyctrl/suntory for /data encryption
     mkdir /dev/socket/suntory 0755 system system
@@ -284,7 +284,7 @@ on post-fs-data
     mkdir /data/tombstones 0755 system system
     mkdir /data/tombstones/vendor 0755 system system
     mkdir /data/pc 0700 radio radio
-    mkdir /data/persist 0770 system system
+    mkdir /data/persist 0770 persist_rw persist_rw
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
