@@ -62,6 +62,7 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_DISABLED_USBAUDIO := true
+BOARD_AUDIO_AMPLIFIER := device/sony/shinano-common/libaudioamp
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
