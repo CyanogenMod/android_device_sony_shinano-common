@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudio-resampler \
+    libaudioamp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
