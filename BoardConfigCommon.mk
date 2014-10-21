@@ -31,6 +31,9 @@ TARGET_DTB_EXTRA_FLAGS := --force-v2
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# Audio
+BOARD_AUDIO_AMPLIFIER := device/sony/shinano-common/libaudioamp
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
