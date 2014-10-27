@@ -236,7 +236,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0
 
 # Camera
-PRODUCT_PACKGES += \
+PRODUCT_PACKAGES += \
     CameraWorkaround
 
 # BCM Wifi
