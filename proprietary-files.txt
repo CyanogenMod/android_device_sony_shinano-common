@@ -397,7 +397,3 @@ bin/clearpad_fwloader
 
 # WiFi
 bin/radish
-
-# WiFi firmware
-etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
-etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
