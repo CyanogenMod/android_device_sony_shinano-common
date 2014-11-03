@@ -239,6 +239,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CameraWorkaround
 
+# IPC Security Config
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
+
+
 # BCM Wifi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 
