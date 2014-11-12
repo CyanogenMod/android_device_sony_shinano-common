@@ -138,14 +138,14 @@
                   rather than the uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option
+    <bool name="config_intrusiveNotificationLed">true</bool> -->
 
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option
+    <bool name="config_intrusiveBatteryLed">true</bool> -->
 
-    <!-- Can we change the battery color? -->
-    <bool name="config_multiColorBatteryLed">true</bool>
+    <!-- Can we change the battery color?
+    <bool name="config_multiColorBatteryLed">true</bool> -->
 
     <!-- Base "touch slop" value used by ViewConfiguration as a
          movement threshold where scrolling should begin. -->
@@ -154,7 +154,7 @@
     <!-- Make things go fast -->
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
-    <!-- SD card is hot-pluggable on this device -->
-    <bool name="config_batterySdCardAccessibility">true</bool>
+    <!-- SD card is hot-pluggable on this device
+    <bool name="config_batterySdCardAccessibility">true</bool> -->
 
 </resources>
