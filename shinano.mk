@@ -228,7 +228,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0
 
 # BCM Wifi
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 # HWUI memory limits
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
