@@ -9,8 +9,6 @@ vendor/lib/soundfx/libqcvirt.so
 
 # Audio BLOBS
 lib/libaudioroute.so
-lib/libtinyalsa.so
-lib/soundfx/libqcomvisualizer.so
 vendor/etc/effect_init_params
 vendor/lib/liblistenhardware.so
 
