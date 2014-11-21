@@ -101,7 +101,7 @@ on fs
     exec /sbin/wait4tad_static
     exec /system/bin/taimport
 
-    restorecon -R /data/etc
+    restorecon_recursive /data/etc
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
