@@ -146,7 +146,8 @@ typedef enum {
     RADIO_TECH_LTE = 14,
     RADIO_TECH_HSPAP = 15, // HSPA+
     RADIO_TECH_GSM = 16, // Only supports voice
-    RADIO_TECH_TD_SCDMA = 17
+    RADIO_TECH_TD_SCDMA = 17,
+    RADIO_TECH_DCHSPAP = 30
 } RIL_RadioTechnology;
 
 // Do we want to split Data from Voice and the use
@@ -367,6 +368,7 @@ typedef struct {
 } RIL_Dial;
 
 typedef struct {
+    int cla;
     int command;    /* one of the commands listed for TS 27.007 +CRSM*/
     int fileid;     /* EF id */
     char *path;     /* "pathid" from TS 27.007 +CRSM command.
@@ -381,6 +383,7 @@ typedef struct {
 } RIL_SIM_IO_v5;
 
 typedef struct {
+    int cla;
     int command;    /* one of the commands listed for TS 27.007 +CRSM*/
     int fileid;     /* EF id */
     char *path;     /* "pathid" from TS 27.007 +CRSM command.
@@ -753,6 +756,7 @@ typedef enum {
 typedef struct {
     int signalStrength;  /* Valid values are (0-31, 99) as defined in TS 27.007 8.5 */
     int bitErrorRate;    /* bit error rate (0-7, 99) as defined in TS 27.007 8.5 */
+    int WhatIsThatSony;  /* What is that Sony ? */
 } RIL_GW_SignalStrength;
 
 typedef struct {
