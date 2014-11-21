@@ -102,6 +102,14 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_shinano
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/sony/shinano-common/sepolicy
+
+# The list below is order dependent
+BOARD_SEPOLICY_UNION := \
+    file_contexts
+
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WLAN_DEVICE                := bcmdhd
