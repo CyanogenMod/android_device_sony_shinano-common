@@ -6,7 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.dont_use_dsd=false \
     persist.radio.eons.enabled=false \
-    persist.radio.oem_socket=false
+    persist.radio.oem_socket=false \
+    rol.ril.ext.ecclist=112,911,999,110,122,119,120,000,08,118
 
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
