@@ -260,6 +260,7 @@ bin/qmuxd
 bin/rmt_storage
 bin/sct_service
 lib/libpin-cache.so
+lib/libstartup-reason.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsnetutils.so
@@ -269,9 +270,6 @@ vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
 
 # Modem firmware
-#etc/firmware/D6x02/mba.b00
-#etc/firmware/D6x02/modem.b01
-#etc/firmware/D6x02/modem.mdt
 etc/firmware/mba.b00
 etc/firmware/mba.mdt
 
