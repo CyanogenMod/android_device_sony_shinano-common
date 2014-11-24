@@ -256,6 +256,16 @@ on boot
 
     chown system /sys/devices/virtual/timed_output/vibrator/vtg_level
 
+    # charger
+    chown root system /sys/module/qpnp_charger/parameters/charger_monitor
+    chown root system /sys/class/power_supply/battery/input_current_max
+    chown root system /sys/class/power_supply/battery/input_current_trim
+    chown root system /sys/class/power_supply/battery/voltage_min
+    chmod 0644 /sys/module/qpnp_charger/parameters/charger_monitor
+    chmod 0644 /sys/class/power_supply/battery/input_current_max
+    chmod 0644 /sys/class/power_supply/battery/input_current_trim
+    chmod 0644 /sys/class/power_supply/battery/voltage_min
+
     # NFC
     # Symlink for compability
     symlink /dev/pn547 /dev/pn544
@@ -447,8 +457,7 @@ service qseecomd /system/bin/qseecomd
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -N \
+    -I/system/etc/wifi/wpa_supplicant_overlay.conf -N \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf \
     -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin \
@@ -465,7 +474,6 @@ service p2p_supplicant /system/bin/wpa_supplicant \
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
@@ -613,7 +621,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 service sensors /system/bin/sensors.qcom
     class main
     user root
-    group root
+    group sensors radio system
 
 service time_daemon /system/bin/time_daemon
     class late_start
@@ -626,6 +634,10 @@ service setup_fs /system/bin/setup_fs /dev/block/platform/msm_sdcc.1/by-name/use
     user root
     group root
     oneshot
+
+service charger /sbin/healthd -c
+    class charger
+    seclabel u:r:healthd:s0
 
 on property:init.svc.surfaceflinger=running
     start ppd
