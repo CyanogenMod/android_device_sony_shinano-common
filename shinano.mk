@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # Sbin
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/charger:root/charger \
+    $(COMMON_PATH)/rootdir/charger:root/healthd \
     $(COMMON_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static
 
 # ANT+
