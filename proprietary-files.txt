@@ -35,9 +35,6 @@ vendor/lib/libadsprpc.so
 
 # Bluetooth
 etc/firmware/BCM4339.hcd
-bin/btnvtool
-bin/hci_qcomm_init
-vendor/lib/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
