@@ -107,7 +107,7 @@ BOARD_SEPOLICY_DIRS += \
     device/sony/shinano-common/sepolicy
 
 # The list below is order dependent
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
     file_contexts
 
 # Wifi
