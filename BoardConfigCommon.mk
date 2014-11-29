@@ -12,26 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from Sony common
-include device/sony/common/BoardConfigCommon.mk
-
-BOARD_EGL_CFG := device/sony/shinano-common/rootdir/system/lib/egl/egl.cfg
-
 # inherit from msm8974-common
 include device/sony/msm8974-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/sony/shinano-common/include
 
-# Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8974
-
 # Platform
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
-TARGET_BOARD_PLATFORM := msm8974
 BOARD_VENDOR_PLATFORM := shinano
-
-# Architecture
-TARGET_CPU_VARIANT := krait
 
 # Kernel information
 BOARD_KERNEL_BASE     := 0x00000000
@@ -41,16 +28,8 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_DTB_EXTRA_FLAGS := --force-v2
 
-# Qualcomm
-BOARD_USES_QCOM_HARDWARE := true
-BOARD_USES_QC_TIME_SERVICES := true
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
-# Audio
-BOARD_USES_ALSA_AUDIO := true
-AUDIO_FEATURE_DISABLED_USBAUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -62,9 +41,6 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_CAMERA_HAVE_ISO := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # CM Hardware
 BOARD_HARDWARE_CLASS := device/sony/shinano-common/cmhw
 
@@ -73,20 +49,6 @@ BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
 # GPS
 TARGET_PROVIDES_GPS_LOC_API := true
-
-# Graphics
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
-MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_shinano
