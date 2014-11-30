@@ -571,11 +571,6 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     disabled
     oneshot
 
-service illumination /system/bin/illumination_service
-    socket illumination stream 0660 system camera
-    class main
-    user root
-
 # Secure Config Transfer service
 service sct_service /system/bin/sct_service
     user root
