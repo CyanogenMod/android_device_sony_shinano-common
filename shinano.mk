@@ -146,7 +146,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.resampler.quality=4
+    af.resampler.quality=-1
 
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
