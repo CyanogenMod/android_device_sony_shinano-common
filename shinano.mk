@@ -145,8 +145,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.resampler.quality=4
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    af.resampler.quality=4
 
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
