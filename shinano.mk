@@ -111,10 +111,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
 
-# Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8974
-
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
