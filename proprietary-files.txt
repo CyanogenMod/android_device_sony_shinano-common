@@ -12,29 +12,8 @@ vendor/lib/soundfx/libqcvirt.so
 vendor/etc/effect_init_params
 vendor/lib/liblistenhardware.so
 
-# ACDB
-etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb
-etc/acdbdata/Fluid/Fluid_General_cal.acdb
-etc/acdbdata/Fluid/Fluid_Global_cal.acdb
-etc/acdbdata/Fluid/Fluid_Handset_cal.acdb
-etc/acdbdata/Fluid/Fluid_Hdmi_cal.acdb
-etc/acdbdata/Fluid/Fluid_Headset_cal.acdb
-etc/acdbdata/Liquid/Liquid_Bluetooth_cal.acdb
-etc/acdbdata/Liquid/Liquid_General_cal.acdb
-etc/acdbdata/Liquid/Liquid_Global_cal.acdb
-etc/acdbdata/Liquid/Liquid_Hdmi_cal.acdb
-etc/acdbdata/Liquid/Liquid_Headset_cal.acdb
-etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-etc/acdbdata/MTP/MTP_General_cal.acdb
-etc/acdbdata/MTP/MTP_Global_cal.acdb
-etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-etc/acdbdata/MTP/MTP_Headset_cal.acdb
-
 # ADSP
 vendor/lib/libadsprpc.so
-
-# Bluetooth
-etc/firmware/BCM4339.hcd
 
 # Camera
 bin/mm-qcamera-daemon
@@ -44,7 +23,6 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 lib/hw/camera.qcom.so:lib/hw/camera.vendor.qcom.so
 lib/libals.so
 lib/libcamera_clientsemc.so
-lib/libcammw.so
 lib/liblights-core.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
@@ -222,13 +200,6 @@ vendor/lib/libquipc_os_api.so
 vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libulp2.so
 
-# HDCP
-etc/firmware/tzhdcp.b00
-etc/firmware/tzhdcp.b01
-etc/firmware/tzhdcp.b02
-etc/firmware/tzhdcp.b03
-etc/firmware/tzhdcp.mdt
-
 # HW Config
 etc/pre_hw_config.sh
 
@@ -254,7 +225,6 @@ etc/media_profiles.xml
 bin/netmgrd
 bin/qmuxd
 bin/rmt_storage
-bin/sct_service
 lib/libpin-cache.so
 lib/libstartup-reason.so
 vendor/lib/libdiag.so
@@ -264,10 +234,6 @@ vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
-
-# Modem firmware
-etc/firmware/mba.b00
-etc/firmware/mba.mdt
 
 # Playready
 etc/firmware/cmnlib.b00
@@ -344,7 +310,3 @@ bin/clearpad_fwloader
 
 # WiFi
 bin/radish
-
-# WiFi firmware
-etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
-etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
