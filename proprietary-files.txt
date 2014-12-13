@@ -1,5 +1,4 @@
 # Audio
-lib/hw/audio.primary.msm8974.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
@@ -246,9 +245,6 @@ vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.mdt
-
-# Media config
-etc/media_profiles.xml
 
 # Modem
 bin/netmgrd
