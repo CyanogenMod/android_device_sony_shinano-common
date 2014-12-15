@@ -291,7 +291,6 @@ vendor/lib/libQSEEComAPI.so
 
 # Security
 lib/lib_asb_tee.so
-lib/libidd.so
 lib/libkeyctrl.so
 
 # Security firmware
