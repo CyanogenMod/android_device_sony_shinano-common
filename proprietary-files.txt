@@ -95,6 +95,7 @@ lib/libface_wrapper.so
 lib/libsomc_chokoballpal.so
 lib/libsony_chokoball.so
 lib/libsony_chokoballrsc.so
+lib/libsony_face.so
 
 # Chromatix
 vendor/lib/libchromatix_imx134_common.so
