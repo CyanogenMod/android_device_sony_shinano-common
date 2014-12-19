@@ -27,6 +27,7 @@ lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libprotobuf-c.so
 lib/libqomx_core.so
+lib/libsony_face.so
 lib/libsys-utils.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libjpegdhw.so
