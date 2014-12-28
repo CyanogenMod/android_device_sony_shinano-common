@@ -324,7 +324,7 @@ lib/libta.so
 
 # Time
 bin/time_daemon
--vendor/lib/libtime_genoff.so
+vendor/lib/libtime_genoff.so
 
 # Touchscreen
 bin/clearpad_fwloader
