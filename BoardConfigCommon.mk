@@ -15,7 +15,7 @@
 # inherit from msm8974-common
 include device/sony/msm8974-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/sony/shinano-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/shinano-common/include
 
 # Platform
 BOARD_VENDOR_PLATFORM := shinano
