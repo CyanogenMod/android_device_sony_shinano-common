@@ -634,6 +634,13 @@ service charger /sbin/healthd -c
     class charger
     seclabel u:r:healthd:s0
 
+service tfa9890_amp /system/bin/tfa9890_amp
+    class main
+    user media
+    group audio
+    oneshot
+    ioprio rt 4
+
 on property:init.svc.surfaceflinger=running
     start ppd
 
