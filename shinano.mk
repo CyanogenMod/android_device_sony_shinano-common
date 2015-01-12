@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    libaudioamp
+     tfa9890_amp
+#    libaudioamp
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
