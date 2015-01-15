@@ -62,7 +62,8 @@ BOARD_SEPOLICY_DIRS += \
     device/sony/shinano-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    mlog_qmi.te
+    mlog_qmi.te \
+    tfa_amp.te
 
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X

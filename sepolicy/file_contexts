@@ -1,8 +1,9 @@
 # NFC
-/dev/pn547       u:object_r:nfc_device:s0
+/dev/pn547                           u:object_r:nfc_device:s0
 
 # Audio
-/dev/tfa98xx     u:object_r:audio_device:s0
+/dev/tfa98xx                         u:object_r:audio_device:s0
+/system/bin/tfa9890_amp              u:object_r:tfa_amp_exec:s0
 
 # Modem
 /system/bin/mlog_qmi_service         u:object_r:mlog_qmi_exec:s0
