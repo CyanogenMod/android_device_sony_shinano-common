@@ -554,11 +554,23 @@ service mpdecision /system/bin/mpdecision --avg_comp
     group system
     disabled
 
+service iddd /system/bin/iddd
+    class main
+    user root
+    group root log
+
 # Start suntrold
 service suntrold /system/bin/suntrold
-    user system
-    group system
+    user root
+    group root
     oneshot
+    class main
+
+# Start Credential manager daemon
+service credmgrd /system/bin/credmgrd
+    user root
+    group root
+    socket credmgr stream 0777 system system
     class main
 
 # bugreport is triggered by holding down volume down, volume up and power
