@@ -81,6 +81,8 @@ on init
     mkdir /storage/removable/remote 0700 root system
     mount tmpfs tmpfs /storage/removable/remote mode=0755,uid=0,gid=0
 
+    chmod 0770 /dev/block/mmcblk0p1
+
     # Set the property to indicate type of virtual display to 0
     # 0 indicates that virtual display is not a Wifi display and that the
     # session is not exercised through RemoteDisplay in the android framework
@@ -273,6 +275,10 @@ on post-fs
     mkdir /dev/socket/suntory 0755 system system
 
 on post-fs-data
+    mkdir /data/misc/qsee 0770 system system
+    mkdir /data/misc/camera 0770 camera camera
+    mkdir /data/suntory 0755 system system
+
     # Used by taimport for MAC addresses
     mkdir /data/etc 0755 root shell
     start taimport
@@ -377,7 +383,7 @@ service qmuxd /system/bin/qmuxd
 
 # SONY: TrimArea Daemon
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
-service tad_static /system/bin/tad_static /dev/block/mmcblk0 1,16
+service tad_static /system/bin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,16
     user root
     group root
     socket tad stream 0660 system system
@@ -507,11 +513,23 @@ service mpdecision /system/bin/mpdecision --avg_comp
     group system
     disabled
 
+service iddd /system/bin/iddd
+    class main
+    user root
+    group root log
+
 # Start suntrold
 service suntrold /system/bin/suntrold
-    user system
-    group system
+    user root
+    group root
     oneshot
+    class main
+
+# Start Credential manager daemon
+service credmgrd /system/bin/credmgrd
+    user root
+    group root
+    socket credmgr stream 0777 system system
     class main
 
 # bugreport is triggered by holding down volume down, volume up and power
@@ -530,6 +548,7 @@ service sct_service /system/bin/sct_service
 # Trim Area QMI service
 service ta_qmi_service /system/bin/ta_qmi_service
     user root
+    group system root net_raw
     class main
 
 # Modem Log QMI service
@@ -555,7 +574,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
-    group camera system inet input
+    group camera system inet input graphics
 
 service sensors /system/bin/sensors.qcom
     class main
