@@ -23,7 +23,7 @@ BOARD_VENDOR_PLATFORM := shinano
 # Kernel information
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=300M dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y display_status=on
+BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=300M dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y display_status=on androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_DTB_EXTRA_FLAGS := --force-v2
@@ -42,7 +42,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/shinano-common/blueto
 BOARD_BLUEDROID_VENDOR_CONF := device/sony/shinano-common/bluetooth/vnd_shinano.txt
 
 # Camera
-TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_CAMERA_HAVE_ISO := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
@@ -57,6 +56,9 @@ TARGET_PROVIDES_GPS_LOC_API := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_shinano
+
+# Protobuf-c
+PROTOBUF_SUPPORTED := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
