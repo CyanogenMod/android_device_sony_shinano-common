@@ -11,18 +11,33 @@ vendor/lib/soundfx/libqcvirt.so
 vendor/lib/libadsprpc.so
 
 # Camera
+bin/credmgrd
+bin/iddd
 bin/mm-qcamera-daemon
+etc/iddd.conf
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 lib/hw/camera.qcom.so:lib/hw/camera.vendor.qcom.so
+lib/lib_extended_boot_lock.so
+lib/lib_get_hwc_revision.so
+lib/lib_get_s1_cert_common_name.so
+lib/lib_get_secure_mode.so
+lib/lib_get_rooting_status.so
+lib/lib_s1_verification.so
+lib/lib_uncontrolled_rooting_status.so
 lib/libcamera_clientsemc.so
+lib/libcammw.so
+lib/libcredential-manager-keystore.so
+lib/libcredential-manager-service.so
+lib/libidd.so
 lib/liblights-core.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libprotobuf-c.so
 lib/libqomx_core.so
 lib/libsys-utils.so
+vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
@@ -35,8 +50,12 @@ vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hdr_lib.so
 vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
 vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
 vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
+vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so
@@ -44,30 +63,31 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
+vendor/lib/libvendorconn.so
 
 # Cacao
-lib/camera/libexcal_object_tracker_plugin.so
 lib/camera/libexcal_cam_ctrl_plugin.so
-lib/camera/libexcal_scene_detector_plugin.so
-lib/camera/libexcal_streaming_ctrl_plugin.so
-lib/camera/libexcal_idt_ctrl_plugin.so
-lib/camera/libexcal_hdr_plugin.so
-lib/camera/libexcal_splitter_plugin.so
-lib/camera/libexcal_color_ctrl_plugin.so
-lib/camera/libexcal_snapshot_ctrl_plugin.so
-lib/camera/libexcal_hal_ctrl_plugin.so
-lib/camera/libexcal_face_detector_plugin.so
-lib/camera/libexcal_debug_display_plugin.so
-lib/camera/libexcal_lens_ctrl_plugin.so
-lib/camera/libexcal_focus_stats_conv_plugin.so
-lib/camera/libexcal_image_conv_plugin.so
-lib/camera/libexcal_flicker_detector_plugin.so
-lib/camera/libexcal_multiframe_nr_plugin.so
-lib/camera/libexcal_jpeg_enc_plugin.so
 lib/camera/libexcal_cap_ctrl_plugin.so
-lib/camera/libexcal_motion_estimation_plugin.so
-lib/camera/libexcal_iq_ctrl_plugin.so
+lib/camera/libexcal_color_ctrl_plugin.so
+lib/camera/libexcal_debug_display_plugin.so
 lib/camera/libexcal_exposure_ctrl_plugin.so
+lib/camera/libexcal_face_detector_plugin.so
+lib/camera/libexcal_flicker_detector_plugin.so
+lib/camera/libexcal_focus_stats_conv_plugin.so
+lib/camera/libexcal_hal_ctrl_plugin.so
+lib/camera/libexcal_hdr_plugin.so
+lib/camera/libexcal_idt_ctrl_plugin.so
+lib/camera/libexcal_image_conv_plugin.so
+lib/camera/libexcal_iq_ctrl_plugin.so
+lib/camera/libexcal_jpeg_enc_plugin.so
+lib/camera/libexcal_lens_ctrl_plugin.so
+lib/camera/libexcal_motion_estimation_plugin.so
+lib/camera/libexcal_multiframe_nr_plugin.so
+lib/camera/libexcal_object_tracker_plugin.so
+lib/camera/libexcal_scene_detector_plugin.so
+lib/camera/libexcal_snapshot_ctrl_plugin.so
+lib/camera/libexcal_splitter_plugin.so
+lib/camera/libexcal_streaming_ctrl_plugin.so
 lib/libcacao_chokoball.so
 lib/libcacao_client.so
 lib/libcacao_common.so
@@ -85,8 +105,6 @@ lib/libcald_server.so
 lib/libcald_util.so
 lib/libexcal_core.so
 lib/libexcal_system.so
-lib/libface.so
-lib/libface_wrapper.so
 lib/libsomc_chokoballpal.so
 lib/libsony_chokoball.so
 lib/libsony_chokoballrsc.so
@@ -195,15 +213,10 @@ etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
-# DRM
-bin/qseecomd
+# DRM (from bacon)
 etc/permissions/com.google.widevine.software.drm.xml
 framework/com.google.widevine.software.drm.jar
 lib/libdrmdecrypt.so
-vendor/lib/libdrmdiag.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libwvdrm_L3.so
@@ -247,15 +260,22 @@ etc/media_profiles.xml
 bin/netmgrd
 bin/qmuxd
 bin/rmt_storage
+lib/libcnefeatureconfig.so
+lib/libmdmdetect.so
 lib/libpin-cache.so
 lib/libstartup-reason.so
+lib/libxml2.so
+vendor/lib/libcneapiclient.so
+vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsnetutils.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libnetmgr.so
+vendor/lib/libperipheral_client.so
 vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libsystem_health_mon.so
+vendor/lib/libxml.so
 
 # Playready
 etc/firmware/cmnlib.b00
@@ -270,12 +290,21 @@ vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqmi.so
+vendor/lib/libsmemlog.so
+
+# QSEECOM
+bin/qseecomd
+vendor/lib/libdrmdiag.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libQSEEComAPI.so
 
 # Security
 lib/lib_asb_tee.so
@@ -297,6 +326,11 @@ etc/firmware/tzsuntory.b01
 etc/firmware/tzsuntory.b02
 etc/firmware/tzsuntory.b03
 etc/firmware/tzsuntory.mdt
+etc/firmware/tzwidevine.b00
+etc/firmware/tzwidevine.b01
+etc/firmware/tzwidevine.b02
+etc/firmware/tzwidevine.b03
+etc/firmware/tzwidevine.mdt
 
 # Sensors
 vendor/lib/hw/sensors.msm8974.so

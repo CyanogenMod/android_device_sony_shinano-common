@@ -140,6 +140,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Voice Call
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.handset.mic=analog \
     ro.qc.sdk.audio.fluencetype=none \
     persist.audio.dualmic.config=endfire \
     persist.audio.fluence.voicecall=true \
@@ -148,21 +149,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # aDSP
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.sensors.qmd=false \
-    debug.qualcomm.sns.hal=w \
-    ro.qc.sdk.sensors.gestures=false \
-    ro.qc.sensors.max_accel_rate=false \
-    ro.qc.sensors.max_gyro_rate=false \
-    ro.qc.sensors.max_mag_rate=false \
-    ro.qc.sensors.smgr_mag_cal_en=true \
-    ro.qualcomm.sensors.pedometer=false \
-    ro.qualcomm.sensors.pam=false \
-    ro.qualcomm.sensors.scrn_ortn=false \
-    ro.qualcomm.sensors.smd=sony \
-    ro.qc.sensors.step_detector=true \
-    ro.qc.sensors.step_counter=true \
-    ro.qualcomm.sensors.georv=true \
-    ro.qc.sensors.max_geomag_rotvec=50
+    ro.qti.sensors.max_accel_rate=false \
+    ro.qti.sensors.max_gyro_rate=false \
+    ro.qti.sensors.max_mag_rate=false \
+    ro.qti.sensors.max_geomag_rotv=50 \
+    ro.qti.sdk.sensors.gestures=false \
+    ro.qti.sensors.pedometer=false \
+    ro.qti.sensors.step_detector=true \
+    ro.qti.sensors.step_counter=true \
+    ro.qti.sensors.pam=false \
+    ro.qti.sensors.scrn_ortn=false \
+    ro.qti.sensors.smd=true \
+    ro.qti.sensors.game_rv=true \
+    ro.qti.sensors.georv=true \
+    ro.qti.sensors.cmc=false \
+    ro.qti.sensors.bte=false \
+    ro.qti.sensors.fns=false \
+    ro.qti.sensors.qmd=false \
+    ro.qti.sensors.amd=false \
+    ro.qti.sensors.rmd=false \
+    ro.qti.sensors.vmd=false \
+    ro.qti.sensors.gtap=false \
+    ro.qti.sensors.tap=false \
+    ro.qti.sensors.facing=false \
+    ro.qti.sensors.tilt=false \
+    ro.qti.sensors.tilt_detector=true \
+    ro.qti.sensors.dpc=false \
+    ro.qti.sensors.wu=false
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
