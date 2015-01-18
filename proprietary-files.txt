@@ -292,6 +292,7 @@ vendor/lib/libsensor_reg.so
 bin/taimport
 bin/ta_param_loader
 bin/ta_qmi_service
+bin/mlog_qmi_service
 lib/libMiscTaAccessor.so
 lib/libmiscta.so
 lib/libta.so
