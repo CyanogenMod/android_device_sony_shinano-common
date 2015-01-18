@@ -581,6 +581,11 @@ service sct_service /system/bin/sct_service
     user root
     class main
 
+# Modem Log QMI service
+service mlog_qmi_service /system/bin/mlog_qmi_service
+    user root
+    class main
+
 # Trim Area QMI service
 service ta_qmi_service /system/bin/ta_qmi_service
     user root
