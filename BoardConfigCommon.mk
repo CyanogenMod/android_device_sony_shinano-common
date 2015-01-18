@@ -61,6 +61,9 @@ TARGET_INIT_VENDOR_LIB := libinit_shinano
 BOARD_SEPOLICY_DIRS += \
     device/sony/shinano-common/sepolicy
 
+BOARD_SEPOLICY_UNION += \
+    mlog_qmi.te
+
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WLAN_DEVICE                := bcmdhd
