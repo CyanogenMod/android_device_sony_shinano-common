@@ -586,6 +586,11 @@ service ta_qmi_service /system/bin/ta_qmi_service
     user root
     class main
 
+# Modem Log QMI service
+service mlog_qmi_service /system/bin/mlog_qmi_service
+    user root
+    class main
+
 # Thermal Manager service
 service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     class main
