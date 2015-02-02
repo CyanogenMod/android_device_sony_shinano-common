@@ -285,9 +285,6 @@ on post-fs-data
     # to observe dnsmasq.leases file for dhcp information of soft ap.
     chown dhcp dhcp /data/misc/dhcp
 
-    # Update WIFI MAC address
-    mkdir /data/misc/wifi/prima 0775 wifi wifi
-
     mkdir /data/credmgr 0700 system system
     mkdir /data/tombstones 0755 system system
     mkdir /data/tombstones/vendor 0755 system system
@@ -394,12 +391,6 @@ on charger
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
-
-# Update Wi-Fi MAC address
-service mac-update /system/bin/mac-update
-    class late_start
-    user wifi
-    oneshot
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
