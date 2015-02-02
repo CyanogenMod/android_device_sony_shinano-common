@@ -78,7 +78,6 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA          := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin"
 WIFI_DRIVER_MODULE_ARG           := "nvram_path=/system/etc/firmware/wlan/bcmdhd/bcmdhd.cal"
-BOARD_NO_WIFI_HAL := true
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
