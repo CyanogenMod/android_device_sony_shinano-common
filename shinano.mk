@@ -119,11 +119,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Qualcomm Random Number Generator
-PRODUCT_PACKAGES += \
-    qrngd \
-    qrngp
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
