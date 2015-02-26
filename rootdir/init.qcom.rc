@@ -261,6 +261,9 @@ on boot
     # Symlink for compability
     symlink /dev/pn547 /dev/pn544
 
+    chown system system /sys/devices/virtual/graphics/fb0/rgb
+    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
+
 on post-fs
     # MHL driver. To support MHL power off charge,
     # the insmod must be done before chargemon.
