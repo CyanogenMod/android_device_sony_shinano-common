@@ -574,13 +574,6 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
     user root
     oneshot
 
-service ppd /system/bin/mm-pp-daemon
-    class late_start
-    user system
-    socket pps stream 0660 system system
-    group system graphics qcom_diag
-    disabled
-
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
@@ -613,12 +606,6 @@ service tfa9890_amp /system/bin/tfa9890_amp
     group audio
     oneshot
     ioprio rt 4
-
-on property:init.svc.surfaceflinger=running
-    start ppd
-
-on property:init.svc.surfaceflinger=stopped
-    stop ppd
 
 on property:service.bootanim.exit=1
     # Enable Power modes
