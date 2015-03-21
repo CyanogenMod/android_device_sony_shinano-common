@@ -1,4 +1,5 @@
 # Audio
+lib/hw/audio.primary.msm8974.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
