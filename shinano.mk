@@ -166,11 +166,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false
 
-# MDP
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.mdpcomp.logs=0 \
-    debug.mdpcomp.4k2kSplit=true
-
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
