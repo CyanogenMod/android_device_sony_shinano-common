@@ -181,7 +181,6 @@ etc/firmware/venus.mdt
 
 # CPU
 bin/mpdecision
-vendor/lib/libqc-opt.so
 
 # DRM
 bin/qseecomd
