@@ -7,6 +7,10 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+# Audio BLOBS
+vendor/etc/effect_init_params
+vendor/lib/liblistenhardware.so
+
 # ADSP
 vendor/lib/libadsprpc.so
 

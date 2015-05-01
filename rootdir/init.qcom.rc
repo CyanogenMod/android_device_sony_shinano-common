@@ -417,10 +417,9 @@ service tad_static /system/bin/tad_static /dev/block/mmcblk0 1,16
     class core
 
 service taimport /system/bin/taimport
-    class core
+    class main
     user root
     group system
-    oneshot
 
 service netmgrd /system/bin/netmgrd
     class main
