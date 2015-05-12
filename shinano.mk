@@ -62,6 +62,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
+PRODUCT_PACKAGES += \
+    tfa9890_amp
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
