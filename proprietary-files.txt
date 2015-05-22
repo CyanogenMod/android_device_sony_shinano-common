@@ -191,10 +191,6 @@ vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# FM
-bin/fmconfig
-bin/fm_qsoc_patches
-
 # GPS
 -app/com.qualcomm.location.apk:priv-app/com.qualcomm.location/com.qualcomm.location.apk
 bin/gsiff_daemon
