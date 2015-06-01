@@ -282,6 +282,10 @@ on post-fs
     mkdir /dev/socket/suntory 0755 system system
 
 on post-fs-data
+    # Used by taimport for MAC addresses
+    mkdir /data/etc 0755 root shell
+    start taimport
+
     mkdir /data/media 0770 media_rw media_rw
 
     # Create the directories used by the Wireless subsystem
@@ -371,9 +375,6 @@ on post-fs-data
     chown media camera /sys/devices/sony_camera_1/info
     chmod 0770 /sys/devices/sony_camera_1/info
 
-    # Used by taimport for MAC addresses
-    mkdir /data/etc
-
 on charger
     # Enable Power modes and set the CPU Freq Sampling rates
     write /sys/module/lpm_levels/enable_low_power/l2 2
@@ -420,6 +421,8 @@ service taimport /system/bin/taimport
     class main
     user root
     group system
+    disabled
+    oneshot
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -650,10 +653,6 @@ on property:service.bootanim.exit=1
     chmod 664 /sys/devices/system/cpu/cpu1/online
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
-
-    # taimport keeps spamming the log unnecessarily,
-    # stop it as it would've done it's job by now.
-    stop taimport
 
 on property:init.svc.bootanim=stopped
     # Switch to ROW and balanced mode after boot for better UX
