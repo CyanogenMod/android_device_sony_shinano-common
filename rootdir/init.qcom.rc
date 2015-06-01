@@ -651,6 +651,10 @@ on property:service.bootanim.exit=1
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
 
+    # taimport keeps spamming the log unnecessarily,
+    # stop it as it would've done it's job by now.
+    stop taimport
+
 on property:init.svc.bootanim=stopped
     # Switch to ROW and balanced mode after boot for better UX
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
