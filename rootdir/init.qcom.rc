@@ -263,6 +263,9 @@ on boot
     chmod 0644 /sys/class/power_supply/battery/input_current_trim
     chmod 0644 /sys/class/power_supply/battery/voltage_min
 
+    # thermananger
+    chmod 0644 /sys/class/power_supply/usb/current_max
+
     # NFC
     # Symlink for compability
     symlink /dev/pn547 /dev/pn544
