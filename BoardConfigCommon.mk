@@ -82,6 +82,7 @@ WIFI_DRIVER_MODULE_ARG           := "nvram_path=/system/etc/firmware/wlan/bcmdhd
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_DEVICE := /dev/pn547
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
