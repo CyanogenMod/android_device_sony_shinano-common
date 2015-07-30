@@ -600,13 +600,6 @@ service time_daemon /system/bin/time_daemon
     user root
     group root radio qcom_diag
 
-# create filesystem if necessary
-service setup_fs /system/bin/setup_fs /dev/block/platform/msm_sdcc.1/by-name/userdata
-    class core
-    user root
-    group root
-    oneshot
-
 service charger /sbin/healthd -c
     class charger
     seclabel u:r:healthd:s0
