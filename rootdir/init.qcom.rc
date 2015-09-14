@@ -577,8 +577,3 @@ service tfa9890_amp /system/bin/tfa9890_amp
     group audio
     oneshot
     ioprio rt 4
-
-on property:init.svc.bootanim=running
-    # Clear Sony boot splash
-    write /sys/class/graphics/fb0/blank 1
-    write /sys/class/graphics/fb0/blank 0
