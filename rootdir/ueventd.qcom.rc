@@ -46,7 +46,6 @@
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
 
-/dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
 /dev/smdcntl0             0640   radio      radio
 /dev/smdcntl1             0640   radio      radio
@@ -196,11 +195,6 @@
 /sys/devices/f9928000.i2c/i2c-6/6-0028  res_ready   0400    nfc     nfc
 /sys/devices/f9928000.i2c/i2c-6/6-0028  recv_rsp    0600    nfc     nfc
 /sys/devices/f9928000.i2c/i2c-6/6-0028  send_cmd    0200    nfc     nfc
-
-# NFC-FeliCa
-/dev/felica_vdev          0600  felica       felica
-/dev/felica_vsub          0660  felica       nfc
-/dev/felica_vsub_cmd      0660  felica       nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
