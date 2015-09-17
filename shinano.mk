@@ -175,10 +175,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false
 
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=row
-
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
