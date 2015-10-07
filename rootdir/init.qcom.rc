@@ -575,3 +575,8 @@ service tfa9890_amp /system/bin/tfa9890_amp
     group audio
     oneshot
     ioprio rt 4
+
+service audiod /system/bin/audiod
+    class late_start
+    user system
+    group system
