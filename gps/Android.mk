@@ -18,6 +18,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(BOARD_VENDOR),sony)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
+ifneq ($(TARGET_PROVIDES_GPS_LOC_API), false)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
 endif
 endif
