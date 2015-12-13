@@ -207,20 +207,6 @@ vendor/firmware/keymaster/keymaster.mdt
 # Media config
 etc/media_profiles.xml
 
-# Modem
-bin/netmgrd
-bin/qmuxd
-bin/rmt_storage
-lib/libpin-cache.so
-lib/libstartup-reason.so
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsnetutils.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libnetmgr.so
-vendor/lib/libril-qc-qmi-1.so
-
 # Playready
 etc/firmware/cmnlib.b00
 etc/firmware/cmnlib.b01
