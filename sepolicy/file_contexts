@@ -1,5 +1,5 @@
 # NFC
-/dev/pn547                           u:object_r:nfc_device:s0
+/dev/pn54x                           u:object_r:nfc_device:s0
 
 # Audio
 /dev/tfa98xx                         u:object_r:audio_device:s0

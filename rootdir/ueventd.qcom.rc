@@ -210,4 +210,4 @@
 /dev/sforce               0660  system      audio
 
 # NFC
-/dev/pn547              0660    nfc         nfc
+/dev/pn54x              0660    nfc         nfc
