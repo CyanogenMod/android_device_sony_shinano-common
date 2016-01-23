@@ -48,9 +48,6 @@ BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
-# GPS
-TARGET_PROVIDES_GPS_LOC_API := true
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_shinano
 
