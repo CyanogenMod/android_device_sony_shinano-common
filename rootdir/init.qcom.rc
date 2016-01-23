@@ -107,12 +107,6 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    # Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 0755 root system
-    chmod 2755 /data/misc/perfd
-    mkdir /data/system/perfd 0770 root system
-    chmod 2770 /data/system/perfd
-
     setprop ro.telephony.call_ring.multiple false
 
     # Remove SUID bit for iproute2 ip tool
@@ -338,10 +332,6 @@ on post-fs-data
 
     rm /data/local/tmp/adreno_config.txt
 
-    # communicate with mpdecision and thermald
-    mkdir /dev/socket/mpdecision 0770 system system
-    chmod 2770 /dev/socket/mpdecision
-
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
@@ -462,11 +452,6 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
-
-service mpdecision /system/bin/mpdecision --avg_comp
-    class late_start
-    user root
-    group system
 
 # Start suntrold
 service suntrold /system/bin/suntrold
