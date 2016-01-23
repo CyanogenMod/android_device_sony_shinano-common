@@ -42,11 +42,6 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/shinano-common/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/sony/shinano-common/bluetooth/vnd_shinano.txt
 
-# Camera
-TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
-BOARD_CAMERA_HAVE_ISO := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # CM Hardware
 BOARD_HARDWARE_CLASS += device/sony/shinano-common/cmhw
 
