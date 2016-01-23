@@ -268,7 +268,6 @@ on post-fs-data
     mkdir /data/tombstones 0755 system system
     mkdir /data/tombstones/vendor 0755 system system
     mkdir /data/pc 0700 radio radio
-    mkdir /data/persist 0770 persist_rw persist_rw
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
@@ -362,7 +361,7 @@ on property:ro.radio.noril=true
 service qseecomd /system/bin/qseecomd
     class core
     user root
-    group root persist_rw
+    group root
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
