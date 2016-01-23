@@ -24,6 +24,12 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    # Support legacy libs
+    symlink /system/vendor/lib/egl /egl
+
+    # BoringSSL hacks
+    export LD_PRELOAD "libboringssl-compat.so"
+
     # for backwards compatibility
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
