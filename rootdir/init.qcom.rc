@@ -70,7 +70,6 @@ on init
 
 on fs
     mount_all ./fstab.qcom
-    setprop ro.crypto.fuse_sdcard true
     mkdir /lta-label 0555 system system
     wait /dev/block/platform/msm_sdcc.1/by-name/LTALabel
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/LTALabel /lta-label nosuid nodev noatime noexec ro barrier=0
@@ -108,9 +107,6 @@ on boot
     chmod 2770 /dev/socket/qmux_gps
 
     setprop ro.telephony.call_ring.multiple false
-
-    # Remove SUID bit for iproute2 ip tool
-    chmod 0755 /system/bin/ip
 
     # port-bridge
     chmod 0660 /dev/smd0
@@ -177,8 +173,6 @@ on boot
 
     chmod 660 /dev/rtc0
     chown system system /dev/rtc0
-
-    chown root system /proc/net/ip_conntrack
 
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
@@ -325,8 +319,6 @@ on post-fs-data
     chown system /dev/block/platform/msm_sdcc.1/by-name
 
     setprop vold.post_fs_data_done 1
-
-    rm /data/local/tmp/adreno_config.txt
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
