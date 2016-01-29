@@ -102,10 +102,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# USB
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
-
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.buffer.size.kb=32 \
