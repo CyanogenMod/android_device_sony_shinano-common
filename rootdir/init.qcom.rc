@@ -254,8 +254,6 @@ on post-fs
     mkdir /dev/socket/suntory 0755 system system
 
 on post-fs-data
-    # Used by taimport for MAC addresses
-    mkdir /data/etc 0755 root shell
 
     mkdir /data/media 0770 media_rw media_rw
 
@@ -274,6 +272,10 @@ on post-fs-data
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
+
+    # Create a folder for audio delta files
+    mkdir /data/audio/acdbdata 0770 media audio
+    mkdir /data/audio/acdbdata/delta 0770 media audio
 
     # IR Blaster
     chown system system /dev/ttyHSL2
@@ -333,26 +335,20 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth gps qcom_diag
 
 # SONY: TrimArea Daemon
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
-service tad_static /system/bin/tad_static /dev/block/mmcblk0 1,16
+service tad_static /system/vendor/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
+    class core
     user root
     group root
     socket tad stream 0660 system system
-    class core
 
-service taimport /system/bin/taimport
-    class late_start
-    user root
-    group system
-    oneshot
-
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
 
 on property:ro.radio.noril=true
@@ -444,13 +440,6 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
-# Start suntrold
-service suntrold /system/bin/suntrold
-    user system
-    group system
-    oneshot
-    class main
-
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
@@ -460,19 +449,19 @@ service bugreport /system/bin/dumpstate -d -p -B \
     keycodes 114 115 116
 
 # Secure Config Transfer service
-service sct_service /system/bin/sct_service
+service sct_service /system/vendor/bin/sct_service
+    class core
     user root
-    class main
 
 # Trim Area QMI service
-service ta_qmi_service /system/bin/ta_qmi_service
+service ta_qmi_service /system/vendor/bin/ta_qmi_service
+    class core
     user root
-    class main
 
 # Modem Log QMI service
-service mlog_qmi_service /system/bin/mlog_qmi_service
+service mlog_qmi_service /system/vendor/bin/mlog_qmi_service
+    class core
     user root
-    class main
 
 # Thermal Manager service
 service thermanager /system/bin/thermanager /system/etc/thermanager.xml
@@ -480,24 +469,19 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     user root
     group root
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
 
-service sensors /system/bin/sensors.qcom
+service sensors /system/vendor/bin/sensors.qcom
     class main
     user root
     group sensors radio system
-
-service time_daemon /system/bin/time_daemon
-    class late_start
-    user root
-    group root radio qcom_diag
 
 service charger /sbin/healthd -c
     class charger
