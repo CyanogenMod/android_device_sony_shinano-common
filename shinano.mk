@@ -145,10 +145,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false
 
-# Time
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
-
 # Touchscreen
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.noresample=1

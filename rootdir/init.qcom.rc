@@ -483,6 +483,12 @@ service sensors /system/vendor/bin/sensors.qcom
     user root
     group sensors radio system
 
+service timekeep /system/bin/timekeep restore
+    class late_start
+    user root
+    group root
+    oneshot
+
 service charger /sbin/healthd -c
     class charger
     seclabel u:r:healthd:s0
