@@ -10,3 +10,5 @@
 
 # Hardware tunables
 /sys/devices/virtual/timed_output/vibrator/vtg_level   -- u:object_r:sysfs_vibrator:s0
+
+/sys/devices/platform/bcmdhd_wlan/macaddr    u:object_r:sysfs_wlanmac:s0
