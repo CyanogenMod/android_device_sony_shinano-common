@@ -24,6 +24,13 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    # Enable subsystem restart
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "RELATED"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "RELATED"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "RELATED"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "RELATED"
+
     # for backwards compatibility
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
@@ -45,16 +52,6 @@ on init
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-
-    # Enable ramdumps from subsystems to dump
-    # adsp ssr
-    write /sys/bus/msm_subsys/devices/subsys0/restart_level "SYSTEM"
-    # modem ssr
-    write /sys/bus/msm_subsys/devices/subsys1/restart_level "RELATED"
-    # wcnss ssr
-    write /sys/bus/msm_subsys/devices/subsys2/restart_level "RELATED"
-    # venus ssr
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level "RELATED"
 
     # Enable panic on out of memory
     write /proc/sys/vm/panic_on_oom 2
@@ -105,6 +102,8 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+    mkdir /dev/socket/qmux_nfc 0770 nfc nfc
+    chmod 2770 /dev/socket/qmux_nfc
 
     setprop ro.telephony.call_ring.multiple false
 
@@ -337,8 +336,8 @@ on property:init.svc.wpa_supplicant=stopped
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/vendor/bin/qmuxd
     class main
-    user radio
-    group radio audio bluetooth gps qcom_diag
+    user root
+    group radio audio bluetooth gps nfc diag qcom_diag
 
 # SONY: TrimArea Daemon
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
