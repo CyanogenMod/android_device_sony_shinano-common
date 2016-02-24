@@ -354,7 +354,7 @@ on property:ro.radio.noril=true
     stop ril-daemon
     stop netmgrd
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
