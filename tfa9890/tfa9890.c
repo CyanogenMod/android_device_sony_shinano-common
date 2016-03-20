@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-//#define LOG_NDEBUG 0
+#define LOG_NDEBUG 0
 #define LOG_TAG "tfa9890"
 
 #include <dlfcn.h>
@@ -23,7 +23,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-
+#include <stdlib.h>
 #include <cutils/log.h>
 #include <cutils/misc.h>
 #include <sys/ioctl.h>
