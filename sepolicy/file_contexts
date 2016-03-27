@@ -1,14 +1,17 @@
 # NFC
-/dev/pn54x                           u:object_r:nfc_device:s0
+/dev/pn54x                                                u:object_r:nfc_device:s0
 
 # Audio
-/dev/tfa98xx                         u:object_r:audio_device:s0
-/system/bin/tfa9890_amp              u:object_r:tfa_amp_exec:s0
+/dev/tfa98xx                                              u:object_r:audio_device:s0
+/system/bin/tfa9890_amp                                   u:object_r:tfa_amp_exec:s0
 
 # Modem
-/system/vendor/bin/mlog_qmi_service         u:object_r:mlog_qmi_exec:s0
+/system/vendor/bin/mlog_qmi_service                       u:object_r:mlog_qmi_exec:s0
 
 # Hardware tunables
 /sys/devices/virtual/timed_output/vibrator/vtg_level   -- u:object_r:sysfs_vibrator:s0
 
-/sys/devices/platform/bcmdhd_wlan/macaddr    u:object_r:sysfs_wlanmac:s0
+/sys/devices/platform/bcmdhd_wlan/macaddr                 u:object_r:sysfs_wlanmac:s0
+
+# Z-Ram
+#/dev/block/zram0                                          u:object_r:swap_block_device:s0
